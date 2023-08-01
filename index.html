@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json outputter</title>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" id="username" placeholder="Enter your name...">
+        <input type="number" id="userage" placeholder="Enter your age...">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    
+    let form = document.getElementById("form");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let username = document.getElementById("username");
+        let userage = document.getElementById("userage");
+
+        if (username.value == "" || userage.value ==  "") 
+        {
+            alert("ensure you input a value in both fields")
+        } else {
+            alert(username.value + " " + userage.value);
+            
+        }
+
+        username.value = "";
+        userage.value = "";
+
+
+
+    });
+    
+    </script>
+</html>
